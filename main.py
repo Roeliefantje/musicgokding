@@ -1,8 +1,9 @@
 from os import system, name
 from time import sleep
-import playsound
+from playsound import playsound
 from random import randint
 import pathlib
+
 
 def makename():
     return
@@ -10,15 +11,16 @@ def makename():
 def randomsong():
 # Look at amount of songs
     songs = []
+    song = ""
     amount_of_songs = 0
     for path in pathlib.Path("songs").iterdir():
         amount_of_songs += 1
         songs.append(path)
 
-    songnumber = randint(0,amount_of_songs)
-
+    songnumber = randint(0,amount_of_songs -1)
+    
     song = songs[songnumber]
-    playsound('/songs/baby-shark-original.mp3')
+    playsound(song)
 
     return song
 
