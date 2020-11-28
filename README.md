@@ -1,1 +1,1 @@
-# musicgokding
+This program should represent binb.co but in Console form and private.
